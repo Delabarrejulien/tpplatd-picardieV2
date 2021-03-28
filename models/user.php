@@ -150,4 +150,59 @@ class User{
         return ($stmt->fetch());
     }
 
+    // compte le nombre d'users sur la bdd
+
+    public static function count($s){
+        $pdo = Database::getInstance();
+        try{
+            $sql = 'SELECT * FROM `user`
+                WHERE `pseudo` LIKE :search 
+                OR `firstname` LIKE :search;';
+
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindValue(':search','%'.$s.'%',PDO::PARAM_STR);
+            $stmt->execute();
+            return($stmt->rowCount());
+        }
+        catch(PDOException $e){
+            return 0;
+        }
+        
+    }
+
+        // Méthode qui permet de lister tout les users
+
+        public static function getAllUsers($search='', $limit=null, $offset=0){
+        
+            $pdo = Database::getInstance();
+    
+            try{
+                if(!is_null($limit)){
+                $sql = 'SELECT * FROM `user`
+                WHERE `pseudo`LIKE :search
+                OR `firstname` LIKE :search
+                LIMIT :limit OFFSET :offset;';
+                }else{
+                    $sql = 'SELECT * FROM `user`
+                    WHERE `pseudo` LIKE :search
+                    OR `firstname` LIKE :search;';
+                }
+    
+                $stmt = $pdo->prepare($sql);
+                $stmt->bindValue(':search','%'.$search.'%',PDO::PARAM_STR);
+    
+                if(!is_null($limit)){
+                    $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+                    $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+                }
+    
+                $stmt->execute();
+                return($stmt->fetchAll());
+            }
+            catch(PDOException $e){
+                return false;
+            }
+    
+        }
+
 }

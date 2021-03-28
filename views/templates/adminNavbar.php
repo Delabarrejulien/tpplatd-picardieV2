@@ -15,7 +15,7 @@
                     
                     <li class="nav-item"><a class="nav-link " href="/../controllers/createRecipeAdminCtrl.php">créer une recette</a></li>
                     <li class="nav-item"><a class="nav-link " href="/../controllers/viewMyRecipesCtrl.php">Gérer les recettes du site </a></li>
-                    <li class="nav-item"><a class="nav-link " href="/../controllers/viewMyRecipesCtrl.php">les utilisateurs du site </a></li>
+                    <li class="nav-item"><a class="nav-link " href="/../controllers/viewAllUsersCtrl.php">les utilisateurs du site </a></li>
                     <li class="nav-item"><a class="nav-link " href="/../controllers/viewProfilCtrl.php">'.$_SESSION['pseudo'].'</a></li>
                     <li class="nav-item" class="important"><a class="nav-link " href="/../controllers/signoutCtrl.php">Déconnexion</a></li>
                     <li class="nav-item"><a class="nav-link " href="/../controllers/adminHeaderCtrl.php">admin</a></li>';
