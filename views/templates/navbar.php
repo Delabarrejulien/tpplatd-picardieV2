@@ -1,36 +1,44 @@
 
-<div id="navbar" class="col-12 m-auto ">
 
-<nav class=" navbar navbar-expand-md navbar-black bg-black">
-    <a id="navbarAccueil" class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link " href="../../controllers/recipesListCtrl.php">les recettes</a></li>
-            
-            
-            <?php
+
+    <nav class="text navbar navbar-expand-md navbar-light bg-white">
+        <a class="navbar-brand text" href="/index.php">Acceuil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+
+                    <?php
                 if(!empty($_SESSION['pseudo'])){
                     echo '
-                   
-                    
-                    <li class="nav-item"><a class="nav-link " href="/../controllers/createRecipeFirstCtrl.php">créer une recette</a></li>
-                    <li class="nav-item"><a class="nav-link " href="/../controllers/viewMyRecipesCtrl.php">Mes recettes</a></li>
-                    <li class="nav-item"><a class="nav-link " href="/../controllers/viewProfilCtrl.php">'.$_SESSION['pseudo'].'</a></li>
-                    <li class="nav-item" class="important"><a class="nav-link " href="/../controllers/signoutCtrl.php">Déconnexion</a></li>';
+
+                <a class="nav-link dropdown-toggle text" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">'.$_SESSION['pseudo'].'</a>
+                <div class="dropdown-menu">
+                <a class="dropdown text" href="/../controllers/viewProfilCtrl.php">Mon profil</a>
+                <br>
+                <br>
+                <a class="dropdown text" href="/../controllers/createRecipeFirstCtrl.php">Créer recette</a>
+                <br>
+                <br>
+                <a class="dropdown text" href="/../controllers/viewMyRecipesCtrl.php">Mes recettes</a>
+                <br>
+                <br>
+                <a class="dropdown text" href="/../controllers/signoutCtrl.php">Déconnexion</a>';
                     
                 } else {
                     echo '<li class="nav-item"><a class="nav-link " href="/../controllers/loginCtrl.php">Connexion/inscription</a></li>';
                 }
                 ?>
-                <li class="nav-item"><a class="nav-link " href="#">Contact</a></li>
-            
-            
+
+
+        </div>
+      
+        </li>
+        <li class="nav text"><a class="nav-link text " href="#">Menu de pâques</a></li>
+        <li class="nav text"><a class="nav-link text" href="">Contact</a></li>
         </ul>
-
-    </div>
-</nav>
 </div>
-
+</nav>

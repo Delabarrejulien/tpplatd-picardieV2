@@ -4,12 +4,20 @@
  
  <div class="card mb-3">
   
-    <div class="card-body">
+    <div class="card-body text">
        <h2 class="card-title text"><p><?= $cooking->name?></h2>
-       <p class="card-text"><p><?= $cooking->categorie?></p>
-       <p class="card-text"><p><?= $cooking->description?></p>
-       <p class="card-text"><p><?= $cooking->ingredient?></p>
-       <p class="card-text"><p><?= $cooking->step?></p>
+
+       <label for="categorie" class="text">Contient des produits a base de:</label>
+       <p class="card-text text"><p><?= $cooking->categorie?></p>
+
+       <label for="description"></label>
+       <p class="card-text text"><p><?= $cooking->description?></p>
+
+       <label for="ingredient"></label>
+       <p class="card-text text"><p><?= $cooking->ingredient?></p>
+
+       <label for="step"></label>
+       <p class="card-text text"><p><?= $cooking->step?></p>
  
        <p class="card-text">
           <small class="text-muted text">Bon apppétit...</small>

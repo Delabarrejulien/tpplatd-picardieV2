@@ -34,7 +34,7 @@
             <div id="title" class="col-12 mb-0 mx-15 px-0 py-3">
                 <img src="../../assets/img/reussite.jpg" class="img-fluid" alt="site de point picardie acceuil">
                 <div class="m-auto text_center">
-                <a id="text" href="/index.php">retour sur la page principale</a>
+                <a class="text" href="/index.php">retour sur la page principale</a>
                 </div>
 
             </div>

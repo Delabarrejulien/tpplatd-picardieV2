@@ -35,7 +35,7 @@
 
             <div class="form-group">
                 <label for="form_message" class="text">les ingrédients</label>
-                <input type='text' id="ingredient" name="ingredient" class="form-control"
+                <textarea id="ingredient" name="ingredient" class="form-control"
                     placeholder="inscrivez un ingredient suivie de la quantité puis passer a la ligne avant d'en reinscrire un nouveau. " maxlenght="50" rows="4"
                     pattern="[A-Za-z-éèêëàâäôöûüç0-9\-\.\,\']+" required></textarea>
                 <div class="help-block with-errors"></div>

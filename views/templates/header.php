@@ -27,14 +27,17 @@
 
 
 
-<?php
-    include(dirname(__FILE__) . '/navbar.php');
-?>
+
 
     <div class="container ">
+    <h1>Le site de la cuisine traditionnel Picarde</h1>
 
-    <div id="main" class="container-fluid ">
+    <div class="container-fluid ">
         <div class="row">
+
+        <?php
+    include(dirname(__FILE__) . '/navbar.php');
+?>
 
             <div id="title" class="col-12 mb-0 mx-15 px-0 py-3">
                 <img src="../../assets/img/logoTitle2.jpg" class="img-fluid" alt="site de point picardie acceuil">

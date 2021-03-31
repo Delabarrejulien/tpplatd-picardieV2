@@ -1,6 +1,6 @@
 html,
 body {
-    background: linear-gradient(243deg, #000000, #000000, #000000);
+    background: #f9f9fa;
     background-size: 600% 600%;
     background-attachment: scroll;
     height: 100%;
@@ -25,6 +25,11 @@ h2 {
     font-family: 'inknut antiqua', serif;
 }
 
+.recipeTitle{
+    font-size: 400px;
+
+}
+
 #textbox {
     text-shadow: 1px 1px 2px black;
     font-family: 'inknut antiqua', serif;
@@ -33,7 +38,7 @@ h2 {
 
 #navbarSupportedContent ul li a:hover {
     transform: scale(1.1);
-    color: #f8e17b;
+    color: #5d4f1f;
 }
 
 #navbarSupportedContent ul li a {
@@ -202,7 +207,7 @@ body {
 }
 
 .bg-c-lite-green {
-    background: linear-gradient(to top, white, #5277a7)
+    background: linear-gradient(to top, rgb(151, 140, 75), #5277a7)
 }
 
 .user-profile {

@@ -7,7 +7,7 @@ require_once(dirname(__FILE__) . '/../../models/User.php');
 
 $select= new User();
 $selectuser=$select->select($_SESSION['id']);
-echo $selectuser->id ;
+
 
 
 
