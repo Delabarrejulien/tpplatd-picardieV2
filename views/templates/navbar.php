@@ -37,7 +37,7 @@
         </div>
       
         </li>
-        <li class="nav text"><a class="nav-link text " href="#">Menu de pâques</a></li>
+        <li class="nav text"><a class="nav-link text " href="../controllers/festivecookCtrl.php">Menu de pâques</a></li>
         <li class="nav text"><a class="nav-link text" href="">Contact</a></li>
         </ul>
 </div>

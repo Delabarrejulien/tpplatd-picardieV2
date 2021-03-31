@@ -25,4 +25,3 @@
     </div>
     <img class="card-img" src="/../assets/img/ficelle-picarde.jpg" alt="la vrai ficelle picarde">
  </div
- 
