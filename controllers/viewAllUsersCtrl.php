@@ -45,7 +45,7 @@ $allUsers = User::getAllUsers($s,$limit,$offset);
 
 
 
-include(dirname(__FILE__) . '/../views/templates/header.php');
+include(dirname(__FILE__) . '/../views/templates/adminHeader.php');
 
 include(dirname(__FILE__) . '/../views/usersLog/viewAllUsers.php');
   

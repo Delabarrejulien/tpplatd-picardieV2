@@ -11,9 +11,9 @@
 <thead>
   <tr>
 
-    <th scope="col" class="text">recettes</th>
-    <th scope="col" class="text">catégories</th>
-    <th scope="col" class="text">voir</th>
+    <th scope="col" class="text">Prénom</th>
+    <th scope="col" class="text">Pseudo</th>
+    <th scope="col" class="text">Voir</th>
   </tr>
 </thead>
 <tbody>
