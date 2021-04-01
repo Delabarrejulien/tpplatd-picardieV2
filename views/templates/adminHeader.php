@@ -27,7 +27,7 @@
 
 
 <div class="container ">
-    <h1>Le site de la cuisine traditionnel Picarde</h1>
+   
 
     <div class="container-fluid ">
         <div class="row">
@@ -36,11 +36,7 @@
     include(dirname(__FILE__) . '/adminNavbar.php');
 ?>
 
-            <div id="title" class="col-12 mb-0 mx-15 px-0 py-3">
-                <img src="/assets/img/enCuisine2.jpeg" class="img-fluid" alt="site de point picardie acceuil">
-
-
-            </div>
+            
         </div>
     </div>
 

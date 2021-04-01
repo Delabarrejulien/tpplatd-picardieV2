@@ -10,11 +10,12 @@ class User{
     private $_mail;
     private $_pseudo;
     private $_password;
+    private $_statut;
 
     private $_pdo;
 
     // Méthode magique construct, appellée automatiquemment à l'instanciation de la classe 
-    public function __construct($name=NULL, $firstname=NULL, $birthday=NULL, $mail=NULL, $pseudo=NULL, $password=NULL){
+    public function __construct($name=NULL, $firstname=NULL, $birthday=NULL, $mail=NULL, $pseudo=NULL, $password=NULL, $statut=NULL){
 
         $this->_name = $name;
         $this->_firstname = $firstname;
@@ -22,6 +23,7 @@ class User{
         $this->_mail = $mail;
         $this->_pseudo = $pseudo;
         $this->_password = $password;
+        $this->_statut = $statut;
 
         $this->_pdo = Database::getInstance();
     }
@@ -49,6 +51,10 @@ class User{
     public function setPassword($password){
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
         $this->_password = $password_hash;
+    }
+
+    public function setStatut($statut){
+        $this->_statut = $statut;
     }
 
     public function getUserLogin($mail, $password){

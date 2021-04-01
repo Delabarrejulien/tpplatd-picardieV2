@@ -10,13 +10,12 @@ require_once(dirname(__FILE__).'/../models/user.php');
 $errorarray= array();
 
         
-$id = $_SESSION['id'];
+// Nettoyage de l'id passé en GET dans l'url
+$id = intval(trim(filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT)));
 
 $user = new User();
 $profil = $user->get($id);
-
-
-
+var_dump($profil);die;
 
 //On ne controle que s'il y a des données envoyées 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -53,7 +52,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
 
-    $birthday=trim(filter_input(INPUT_POST, 'birthday', FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES));
+    $birthday=trim(filter_input(INPUT_POST, 'birthday', FILTER_SANITIZE_NUMBER_INT, FILTER_FLAG_NO_ENCODE_QUOTES));
 
     if(!empty($birthday)){
        
@@ -108,23 +107,35 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $errorarray['password_error'] = 'request';
     }
 
+    $statut=trim(filter_input(INPUT_POST, 'statut', FILTER_SANITIZE_NUMBER_INT, FILTER_FLAG_NO_ENCODE_QUOTES));
+
+    if(!empty($statut)){
+       
+        $testRegex= preg_match(REGEXP_NUMBER,$statut);
+        if($testRegex == false){
+            $errorarray['statut_error'] = 'not valid';
+        }
+    }else{
+        $errorarray['statut_error'] = 'request';
+    }
+
     
     
-    
+    var_dump($errorArray);die;
 
  // ***************************************************************
 
     // Si il n'y a pas d'erreurs, on met à jour l' utilisateur.
     if(empty($errorsArray) ){    
-        $user = new User($name, $firstname, $birthday, $mail, $pseudo, $password);
+        $user = new User($name, $firstname, $birthday, $mail, $pseudo, $password, $statut);
 
         
         $result = $user->update($id);
         if($result===true){
-            header('location:/../views/templates/greatHeader.php');
+            header('location:/../views/templates/adminHeader.php');
         } else {
-            // Si l'enregistrement s'est mal passé, on affiche à nouveau le formulaire de création avec un message d'erreur.
-            $msgCode=$result;
+            // Si l'enregistrement s'est mal passé, on affiche un message d'erreur.
+            header('location:/../views/templates/badHeader.php');
         }
     }
 } else {
@@ -138,6 +149,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $mail = $user->mail;
         $pseudo = $user->pseudo;
         $password = $user->password;
+        $statut = $user->statut;
         
     } else {
         header('location: /../views/templates/badHeaderCtrl.php');
@@ -151,7 +163,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 include(dirname(__FILE__) . '/../views/templates/headerLight.php');
 
-include(dirname(__FILE__) . '/../views/usersLog/updateProfil.php');
+include(dirname(__FILE__) . '/../views/usersLog/adminUpdateProfil.php');
 
 include(dirname(__FILE__) . '/../views/templates/footer.php');
 

@@ -10,9 +10,9 @@
 <table class="table">
 <thead>
   <tr>
-
-    <th scope="col" class="text">Prénom</th>
+  <th scope="col" class="text">Prénom</th>
     <th scope="col" class="text">Pseudo</th>
+    <th scope="col" class="text">Statut</th>
     <th scope="col" class="text">Voir</th>
   </tr>
 </thead>
@@ -27,10 +27,11 @@
       
       <td><?=htmlentities($user->firstname)?></td>
       <td><?=htmlentities($user->pseudo)?></td>
+      <td><?=htmlentities($user->statut)?></td>
       
       
       <td>
-        <a href="/controllers/viewAllUsersCtrl.php?id=<?=htmlentities($user->id)?>"><i class="far fa-edit"></i></a>
+        <a href="/controllers/adminViewUserCtrl.php?id=<?=htmlentities($user->id)?>"><i class="far fa-edit"></i></a>
     
       </td>
       </tr>
@@ -45,12 +46,14 @@
 
     <?php
     for($i=1;$i<=$nbPages;$i++){
-      if($i==$currentPage){ ?>    
+      if($i==$currentPage){ ?> 
+       <span class="visually-hidden text">Page</span>
+          </span>
+         
         <li class="page-item active" aria-current="page">
           <span class="page-link">
             <?=$i?> 
-            <span class="visually-hidden">(current)</span>
-          </span>
+           
         </li>
   <?php } else { ?>
     <li class="page-item"><a class="page-link" href="?currentPage=<?=$i?>&s=<?=$s?>"><?=$i?></a></li>
