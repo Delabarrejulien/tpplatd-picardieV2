@@ -1,8 +1,8 @@
 <?php
 
 DEFINE('DSN', 'mysql:host=localhost;dbname=platpicardie');
-DEFINE('LOGIN', 'root');
-DEFINE('PASSWORD', '');
+DEFINE('LOGIN', 'julien');
+DEFINE('PASSWORD', 'julien');
 
 $displayMsg = array(
     '0' => ['type' => 'alert-danger', 'msg' => 'Une erreur inconnue s\'est produite'],
