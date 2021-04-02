@@ -23,6 +23,8 @@
           <small class="text-muted text">Bon apppétit...</small>
        </p>
     </div>
-    <img class="card-img" src="/../assets/img/ficelle-picarde.jpg" alt="la vrai ficelle picarde">
+    <div id="title" class=" center m-auto col-6 mb-0 mx-15 px-0 py-3">
+    <img class="card-img" src="/assets/img/recipes.jpg" alt="prochainement vos photos">
+ </div>
  </div
  

@@ -13,9 +13,9 @@ $errorarray= array();
 // Nettoyage de l'id passé en GET dans l'url
 $id = intval(trim(filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT)));
 
-$user = new User();
-$profil = $user->get($id);
-var_dump($profil);die;
+// $user = new User();
+// $profil = $user->get($id);
+
 
 //On ne controle que s'il y a des données envoyées 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -138,24 +138,25 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             header('location:/../views/templates/badHeader.php');
         }
     }
+
 } else {
-    $user= user::get($id);
+    $user= user::get($id);}
     // Si l'user n'existe pas, on redirige vers la liste complète avec un code erreur
-    if($user){
-        $id = $user->id;
-        $name = $user->name;
-        $firstname = $user->firstname;
-        $birthday = $user->birthday;
-        $mail = $user->mail;
-        $pseudo = $user->pseudo;
-        $password = $user->password;
-        $statut = $user->statut;
+//     if($user){
+//         $id = $user->id;
+//         $name = $user->name;
+//         $firstname = $user->firstname;
+//         $birthday = $user->birthday;
+//         $mail = $user->mail;
+//         $pseudo = $user->pseudo;
+//         $password = $user->password;
+//         $statut = $user->statut;
         
-    } else {
-        header('location: /../views/templates/badHeaderCtrl.php');
-    }
+//     } else {
+//         header('location: /../views/templates/badHeaderCtrl.php');
+//     }
     
-}
+// }
 
 
 

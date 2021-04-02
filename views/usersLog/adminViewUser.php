@@ -34,7 +34,7 @@
 
                 <div class="col-sm-6 mt-4">
                     <a class="text"
-                        href="/controllers/adminUpdateProfilCtrl.php?<?=$_SESSION['pseudo']?>">Modifer/compléter</a>
+                        href="/controllers/adminUpdateProfilCtrl.php?<?=$id?>">Modifer/compléter</a>
                 </div>
             </div>
             

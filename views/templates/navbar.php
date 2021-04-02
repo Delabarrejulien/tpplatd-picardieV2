@@ -26,7 +26,13 @@
                 <a class="dropdown text" href="/../controllers/viewMyRecipesCtrl.php">Mes recettes</a>
                 <br>
                 <br>
-                <a class="dropdown text" href="/../controllers/signoutCtrl.php">Déconnexion</a>';
+                <a class="dropdown text" href="/../controllers/signoutCtrl.php">Déconnexion</a>
+                </li>
+                <li class="nav text"><a class="nav-link text " href="../controllers/recipesListCtrl.php">les recettes</a></li>
+                <li class="nav text"><a class="nav-link text " href="../controllers/festivecookCtrl.php">Menu de pâques</a></li>
+                <li class="nav text"><a class="nav-link text " href="../controllers/classicCtrl.php">les classiques de notre région</a></li>
+                <li class="nav text"><a class="nav-link text" href="">Contact</a></li>
+                </ul>';
                     
                 } else {
                     echo '<li class="nav-item"><a class="nav-link " href="/../controllers/loginCtrl.php">Connexion/inscription</a></li>';
@@ -36,9 +42,6 @@
 
         </div>
       
-        </li>
-        <li class="nav text"><a class="nav-link text " href="../controllers/festivecookCtrl.php">Menu de pâques</a></li>
-        <li class="nav text"><a class="nav-link text" href="">Contact</a></li>
-        </ul>
+      
 </div>
 </nav>

@@ -1,6 +1,12 @@
 <?php
 
 
+session_start();
+
+require_once(dirname(__FILE__) . '/../models/user.php');
+
+$select= new User();
+$selectuser=$select->select($_SESSION['id']);
 
 
 include(dirname(__FILE__) . '/../views/templates/personnalheader.php');

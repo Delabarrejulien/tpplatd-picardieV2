@@ -52,6 +52,15 @@
                 <div class="help-block with-errors"></div>
             </div>
 
+            <div class="form-group">
+                <label for="form_message" class="text">une photo ?</label>
+                <br>
+                <input type="file" id="img" name="img" class="text"
+                    placeholder="Photo facultative l'administrateur pourras illustrer la recette par la suite"  rows="4"
+                    >
+                <div class="help-block with-errors"></div>
+            </div>
+
             <input id=text type="submit" value="Valider" />
             <br>
             <br>

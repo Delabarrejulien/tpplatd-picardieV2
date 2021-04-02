@@ -45,12 +45,13 @@
 
       <?php
       for($i=1;$i<=$nbPages;$i++){
-        if($i==$currentPage){ ?>    
+        if($i==$currentPage){ ?>   
+        <span class="visually-hidden">page</span>
+            </span> 
           <li class="page-item active" aria-current="page">
             <span class="page-link">
               <?=$i?> 
-              <span class="visually-hidden">(current)</span>
-            </span>
+              
           </li>
     <?php } else { ?>
       <li class="page-item"><a class="page-link" href="?currentPage=<?=$i?>&s=<?=$s?>"><?=$i?></a></li>

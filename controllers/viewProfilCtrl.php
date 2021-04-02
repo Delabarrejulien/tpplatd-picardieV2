@@ -24,7 +24,7 @@ $selectuser=$select->select($_SESSION['id']);
 
 /* ************* AFFICHAGE DES VUES **************************/
 
-include(dirname(__FILE__) . '/../views/templates/headerLight.php');
+include(dirname(__FILE__) . '/../views/templates/headerLight2.php');
     include(dirname(__FILE__) . '/../views/usersLog/viewProfil.php');
 include(dirname(__FILE__) . '/../views/templates/footer.php');
 

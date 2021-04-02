@@ -1,4 +1,5 @@
-
+<br>
+<br>
 <footer class="bg-light text-center text-black">
  
   
@@ -63,9 +64,11 @@
 
   <!-- Copyright -->
   <div class="text-center p-3 text">
+  <a class="nav-link text " href="../controllers/mentionsLegalesCtrl.php">Mentions légales</a>
     © PpjD 2021 Copyright
 
   </div>
+  
   <!-- Copyright -->
 </footer>  
 

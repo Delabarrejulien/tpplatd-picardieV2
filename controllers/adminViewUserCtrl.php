@@ -21,7 +21,7 @@ $user = User::get($id);
 /*************************************************************/
 
 $select= new User();
-$selectuser=$select->select($_SESSION['id']);
+$selectuser=$select->select($id);
 
 
 /* ************* AFFICHAGE DES VUES **************************/

@@ -40,9 +40,7 @@
                 <img src="/assets/img/enCuisine2.jpeg" class="img-fluid" alt="site de point picardie acceuil">
 
 
-            </div>
-        </div>
-    </div>
+   
 
 
 

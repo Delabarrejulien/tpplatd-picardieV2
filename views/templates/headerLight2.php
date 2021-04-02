@@ -9,7 +9,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;600&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
     <title>Ppicardie</title>
 
     <link href="../../assets/css/style.css" rel="stylesheet" />
-    
+
     <title>Plats d'Picardie</title>
 </head>
 
@@ -30,19 +31,9 @@
 
 
     <div class="container ">
-    <h1>Le site de la cuisine traditionnel Picarde</h1>
-
-    <div class="container-fluid ">
-        <div class="row">
-
+        <h1>Le site de la cuisine traditionnel Picarde</h1>
         <?php
     include(dirname(__FILE__) . '/navbar.php');
 ?>
-
-            <div id="title" class="col-12 mb-0 mx-15 px-0 py-3">
-                <img src="../../assets/img/logoTitle2.jpg" class="img-fluid" alt="site de point picardie acceuil">
-
-
-            </div>  
-            <br>   
+ </div>
    

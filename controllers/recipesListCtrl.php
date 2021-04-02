@@ -9,11 +9,8 @@ require_once(dirname(__FILE__).'/../models/user.php');
 $id = intval(trim(filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT)));
 
 // Appel à la méthode statique permettant de récupérer toutes les infos d'une recette
-$cooking = Cooking::get($id);
+$cooking = Cooking::getAllcook($id);
 
-if(!$Cooking){
-    header('location:/../views/templates/badHeader.php');
-}
 
 
 // Récupération de la valeur recherchée et on nettoie
@@ -46,7 +43,7 @@ $allCook = Cooking::getAllcook($s,$limit,$offset);
 
 
 
-include(dirname(__FILE__) . '/../views/templates/header.php');
+include(dirname(__FILE__) . '/../views/templates/headerLight.php');
 
 include(dirname(__FILE__) . '/../views/recipes/recipesList.php');
   
